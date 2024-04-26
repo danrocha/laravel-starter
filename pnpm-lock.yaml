@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@formkit/core':
+        specifier: ^1.6.2
+        version: 1.6.2
+      '@formkit/icons':
+        specifier: ^1.6.2
+        version: 1.6.2
+      '@formkit/pro':
+        specifier: ^0.123.2
+        version: 0.123.2(@formkit/core@1.6.2)(@formkit/inputs@1.6.2)
+      '@formkit/vue':
+        specifier: ^1.6.2
+        version: 1.6.2(tailwindcss@3.4.3)(vue@3.4.25)
     devDependencies:
       '@inertiajs/vue3':
         specifier: ^1.0.0
@@ -205,6 +218,64 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@formkit/core@1.6.2':
+    resolution: {integrity: sha512-48LGugLoQ9QR/GDvsVwviMQ/lk9rWA0iDy8Zg9BXPn0nfuWr5EW2IOTEZW3ZX8mAyvVZ4s+Xt5S40la8Sj5GTA==}
+
+  '@formkit/dev@1.6.2':
+    resolution: {integrity: sha512-fSMSSGC+hz0x2EKdsDGWwqfZaam+XP/F4Trgis+IhjPyj/Pbkyh+lHi1QR3mhNaxENcE2Pq1sfaTQeahnaAqNw==}
+
+  '@formkit/drag-and-drop@0.0.30':
+    resolution: {integrity: sha512-2DjdagW6ibG/SfTwOxH1y/NBK50nSV2tfZ0iXMbdI/NCAsXr4UrKI/ytjm38qunpzb1w68r4b5iODV7YE/lbgA==}
+
+  '@formkit/i18n@1.6.2':
+    resolution: {integrity: sha512-t68g35ZIvwBahT+mVomdr5zUFk+K4MIyJFY2zVSyYjiVxLV/YA1iOqb88YPTm/7h9LKpKMY7g+5JHGhzTmD0tw==}
+
+  '@formkit/icons@1.6.2':
+    resolution: {integrity: sha512-NubYCeXJmYpwO3nn+x9+iCJVmc5I52A0ykVMbPOlLjmoZRQnXP+ABaJjzZ+S5BsNjra3LxBjkaL5svpNixCxeg==}
+
+  '@formkit/inputs@1.6.2':
+    resolution: {integrity: sha512-Fe0xz6npjjoq+A/KupyzRTWUs0/Y5j8Ewh6XB8QMDMdutDeDamumsdZN6Mi9ilnQctZkPn6jKUPUGXRyMCfVDw==}
+
+  '@formkit/observer@1.6.2':
+    resolution: {integrity: sha512-aWx996VlJNro5LTs2WfA5cf3p1k0+gdOuKOd3mVNroGt5UpbX4sq3ngVkKE3jYIQgLDSbcsHFQRtFwc1ukZF5g==}
+
+  '@formkit/pro@0.123.2':
+    resolution: {integrity: sha512-zWM7fAHOe0PSjXeJaitUvHMImThxo/ZokZ8rX42TBJ8MN0IndsOqlwL20VzA/mvY3hMwoZKQSelgjciEEamkVw==}
+    peerDependencies:
+      '@formkit/core': ^1.5.9
+      '@formkit/inputs': ^1.5.9
+
+  '@formkit/rules@1.6.2':
+    resolution: {integrity: sha512-SRrBtv6UmQzAlC7sOKWHsunoSLoRkoVI15NVQ98YHh16tpDM8GWAFagAaQS1TxnCavlUEBq9m3vMztV/O8Qpcw==}
+
+  '@formkit/tempo@0.0.8':
+    resolution: {integrity: sha512-q9Ch3Epjb5yFVNV2vAruHyPwcvZujiPcBQ7r6if+HmOciMhwkQccL9NOm9LNmN23hNk2y3+El/ygUH2/x539sg==}
+
+  '@formkit/themes@1.6.2':
+    resolution: {integrity: sha512-NNJzMs0QIP1Mm1SH0teMKx4/KQl+SMQ9Go25T4HnLKv6z82dA6vBUx1Wdai+BpEBYLnux3G77A7FR4SRXJxQfA==}
+    peerDependencies:
+      tailwindcss: ^3.2.0
+      unocss: 0.x.x
+      windicss: ^3.0.0
+    peerDependenciesMeta:
+      tailwindcss:
+        optional: true
+      unocss:
+        optional: true
+      windicss:
+        optional: true
+
+  '@formkit/utils@1.6.2':
+    resolution: {integrity: sha512-H7ai+AbemaF9okM2fUeHQUBEiGmiyXX/4M/P1ANI9C3nAqsPewmZucLH0QxihkjuMYOwO+MnHbG3rLS7FAkxig==}
+
+  '@formkit/validation@1.6.2':
+    resolution: {integrity: sha512-2Xtp6tlPqMOAmyTKUbMpGIs+siYFbnI4dxrJBSkWKXj1qrCSitJGwU1NXpHeP9QuhyC19pUPIG52iNVlI9czNg==}
+
+  '@formkit/vue@1.6.2':
+    resolution: {integrity: sha512-IRcYv4iHn872bezx9jy7ipYKA1Ctiq8y7owxsjaC+5+FKHubduetrnvVjEaqcRpwm9dVc8vLG5RgDOAlHdU0Fw==}
+    peerDependencies:
+      vue: ^3.4.0
 
   '@inertiajs/core@1.0.16':
     resolution: {integrity: sha512-j0nS1KwNv2aNSC10u3qfOswhSMcHSURypPlVSimyRrxKSdrLRmPidow06avunkLU6T7nI9oDXt71WOeO3wCLQg==}
@@ -1086,6 +1157,83 @@ snapshots:
 
   '@esbuild/win32-x64@0.20.2':
     optional: true
+
+  '@formkit/core@1.6.2':
+    dependencies:
+      '@formkit/utils': 1.6.2
+
+  '@formkit/dev@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/utils': 1.6.2
+
+  '@formkit/drag-and-drop@0.0.30': {}
+
+  '@formkit/i18n@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/utils': 1.6.2
+      '@formkit/validation': 1.6.2
+
+  '@formkit/icons@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+
+  '@formkit/inputs@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/utils': 1.6.2
+
+  '@formkit/observer@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/utils': 1.6.2
+
+  '@formkit/pro@0.123.2(@formkit/core@1.6.2)(@formkit/inputs@1.6.2)':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/drag-and-drop': 0.0.30
+      '@formkit/inputs': 1.6.2
+      '@formkit/tempo': 0.0.8
+
+  '@formkit/rules@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/utils': 1.6.2
+      '@formkit/validation': 1.6.2
+
+  '@formkit/tempo@0.0.8': {}
+
+  '@formkit/themes@1.6.2(tailwindcss@3.4.3)':
+    dependencies:
+      '@formkit/core': 1.6.2
+    optionalDependencies:
+      tailwindcss: 3.4.3
+
+  '@formkit/utils@1.6.2': {}
+
+  '@formkit/validation@1.6.2':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/observer': 1.6.2
+      '@formkit/utils': 1.6.2
+
+  '@formkit/vue@1.6.2(tailwindcss@3.4.3)(vue@3.4.25)':
+    dependencies:
+      '@formkit/core': 1.6.2
+      '@formkit/dev': 1.6.2
+      '@formkit/i18n': 1.6.2
+      '@formkit/inputs': 1.6.2
+      '@formkit/observer': 1.6.2
+      '@formkit/rules': 1.6.2
+      '@formkit/themes': 1.6.2(tailwindcss@3.4.3)
+      '@formkit/utils': 1.6.2
+      '@formkit/validation': 1.6.2
+      vue: 3.4.25
+    transitivePeerDependencies:
+      - tailwindcss
+      - unocss
+      - windicss
 
   '@inertiajs/core@1.0.16':
     dependencies:
