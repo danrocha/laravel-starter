@@ -30,6 +30,9 @@
         "@formkit/core": "^1.6.2",
         "@formkit/icons": "^1.6.2",
         "@formkit/pro": "^0.123.2",
-        "@formkit/vue": "^1.6.2"
+        "@formkit/vue": "^1.6.2",
+        "@tiptap/pm": "^2.3.0",
+        "@tiptap/starter-kit": "^2.3.0",
+        "@tiptap/vue-3": "^2.3.0"
     }
 }
