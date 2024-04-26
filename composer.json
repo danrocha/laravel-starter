@@ -27,7 +27,10 @@
         "nunomaduro/collision": "^8.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
-        "spatie/laravel-ignition": "^2.4"
+        "spatie/laravel-ignition": "^2.4",
+        "squizlabs/php_codesniffer": "*",
+        "tightenco/duster": "^2.7",
+        "tightenco/tlint": "^9.3"
     },
     "autoload": {
         "psr-4": {
@@ -57,9 +60,9 @@
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
         ],
-        "pint": [
-            "./vendor/bin/pint"
-        ]
+        "lint": "./vendor/bin/duster lint",
+        "fix": "./vendor/bin/duster fix",
+        "duster": "./vendor/bin/duster"
     },
     "extra": {
         "laravel": {
