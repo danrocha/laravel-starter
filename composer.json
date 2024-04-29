@@ -13,6 +13,7 @@
         "laravel/breeze": "^2.0",
         "laravel/framework": "^11.0",
         "laravel/pail": "^1.1",
+        "laravel/prompts": "^0.1.20",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "opcodesio/log-viewer": "^3.8",
