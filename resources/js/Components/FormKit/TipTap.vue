@@ -8,7 +8,12 @@
                 :key="index"
                 :icon="button.icon"
                 :isActive="
-                    button.isActiveCheck ? editor.isActive(button.isActiveCheck, button.isActiveCheckParams) : false
+                    button.isActiveCheck
+                        ? editor.isActive(
+                              button.isActiveCheck,
+                              button.isActiveCheckParams,
+                          )
+                        : false
                 "
                 @click="
                     editor
@@ -37,10 +42,10 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted, onBeforeUnmount } from 'vue';
-import StarterKit from '@tiptap/starter-kit';
-import { Editor, EditorContent } from '@tiptap/vue-3';
-import TipTapButton from '@/Components/TipTapButton.vue';
+import { ref, watch, onMounted, onBeforeUnmount } from "vue";
+import StarterKit from "@tiptap/starter-kit";
+import { Editor, EditorContent } from "@tiptap/vue-3";
+import TipTapButton from "@/Components/FormKit/TipTapButton.vue";
 
 const props = defineProps({
     context: Object,
@@ -49,48 +54,48 @@ const props = defineProps({
 const editor = ref(null);
 
 const buttonData = ref([
-    { icon: 'bi-type-bold', action: 'toggleBold', isActiveCheck: 'bold' },
-    { icon: 'bi-type-italic', action: 'toggleItalic', isActiveCheck: 'italic' },
+    { icon: "bi-type-bold", action: "toggleBold", isActiveCheck: "bold" },
+    { icon: "bi-type-italic", action: "toggleItalic", isActiveCheck: "italic" },
     {
-        icon: 'bi-type-strikethrough',
-        action: 'toggleStrike',
-        isActiveCheck: 'strike',
+        icon: "bi-type-strikethrough",
+        action: "toggleStrike",
+        isActiveCheck: "strike",
     },
     {
-        icon: 'bi-type-h1',
-        action: 'toggleHeading',
+        icon: "bi-type-h1",
+        action: "toggleHeading",
         actionParams: { level: 1 },
-        isActiveCheck: 'heading',
+        isActiveCheck: "heading",
         isActiveCheckParams: { level: 1 },
     },
     {
-        icon: 'bi-type-h2',
-        action: 'toggleHeading',
+        icon: "bi-type-h2",
+        action: "toggleHeading",
         actionParams: { level: 2 },
-        isActiveCheck: 'heading',
+        isActiveCheck: "heading",
         isActiveCheckParams: { level: 2 },
     },
     {
-        icon: 'bi-type-h3',
-        action: 'toggleHeading',
+        icon: "bi-type-h3",
+        action: "toggleHeading",
         actionParams: { level: 3 },
-        isActiveCheck: 'heading',
+        isActiveCheck: "heading",
         isActiveCheckParams: { level: 3 },
     },
     {
-        icon: 'bi-list-ul',
-        action: 'toggleBulletList',
-        isActiveCheck: 'bulletList',
+        icon: "bi-list-ul",
+        action: "toggleBulletList",
+        isActiveCheck: "bulletList",
     },
     {
-        icon: 'bi-list-ol',
-        action: 'toggleOrderedList',
-        isActiveCheck: 'orderedList',
+        icon: "bi-list-ol",
+        action: "toggleOrderedList",
+        isActiveCheck: "orderedList",
     },
     {
-        icon: 'bi-blockquote-left',
-        action: 'toggleBlockquote',
-        isActiveCheck: 'blockquote',
+        icon: "bi-blockquote-left",
+        action: "toggleBlockquote",
+        isActiveCheck: "blockquote",
     },
 ]);
 
@@ -114,7 +119,7 @@ onMounted(() => {
         content: props.context?._value,
         editorProps: {
             attributes: {
-                class: 'prose focus:outline-none ',
+                class: "prose focus:outline-none ",
             },
         },
         onUpdate: () => {
