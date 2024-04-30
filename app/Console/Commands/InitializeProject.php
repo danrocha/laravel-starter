@@ -26,6 +26,9 @@ class InitializeProject extends Command
 
         // Run custom db:create command
         $this->call('db:create');
+
+        // generate project key
+        $this->runProcess(['php', 'artisan', 'key:generate'], 'Generating application key...');
     }
 
     private function runProcess(array $command, string $description)
