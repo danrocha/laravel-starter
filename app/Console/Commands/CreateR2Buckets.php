@@ -38,13 +38,16 @@ class CreateR2Buckets extends Command
         // Update .env file
         $this->updateEnvironmentFile('.env', $devBucket);
 
-        $this->line("\n<fg=cyan>📘 Further Configuration Instructions:</>\n");
         $this->line('<fg=yellow>For CLOUDFLARE_R2_ACCESS_KEY_ID and CLOUDFLARE_R2_SECRET_ACCESS_KEY, visit:</>');
         $this->line("<href=https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/api-tokens>https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/api-tokens</>\n");
 
         $this->line('<fg=yellow>For CLOUDFLARE_R2_ENDPOINT and to connect a domain (to setup CLOUDFLARE_R2_URL), visit:</>');
         $this->line("<fg=white>(DEV):</> <href=https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$devBucket}/settings>https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$devBucket}/settings</>");
         $this->line("<fg=white>(PROD):</> <href=https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$prodBucket}/settings>https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$prodBucket}/settings</>\n");
+
+        $this->line('<fg=yellow>Add this CORS policy to your bucket:</>');
+        $this->line("<href=https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$devBucket}/cors/edit>https://dash.cloudflare.com/aadb3f382857e96bd2f6c9f1b5889f8d/r2/default/buckets/{$devBucket}/cors/edit</>");
+        $this->line("<fg=white>[\n  {\n    \"AllowedOrigins\": [\n      \"http://[your-app].test\"\n    ],\n    \"AllowedMethods\": [\n      \"GET\", \"POST\", \"DELETE\", \"PUT\", \"HEAD\"\n    ],\n    \"AllowedHeaders\": [\n      \"*\"\n    ]\n  }\n]</>");
     }
 
     protected function executeWranglerCommand($command)
